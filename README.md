@@ -18,5 +18,5 @@ docker-compose up -d --build
 __________________________________________________________________
 
 To access application via browser go to [Application](http://localhost:8000/docs)  
-Make sure to access this endpoint firstly [DB](http://localhost:8000/db) it will check database connection and create initial tables in database
+Make sure to access this endpoint firstly (it will check database connection and create initial tables in database) [DB](http://localhost:8000/db)
 You can download the Postman collection from [this link](https://drive.google.com/file/d/1VPYa71VIQky0UykEeWdqK8aAOEEFV7tf/view?usp=sharing)
