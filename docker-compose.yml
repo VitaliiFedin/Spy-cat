@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: python app/main.py
+    volumes:
+      - .:/code
+    depends_on:
+      - db
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+
+  db:
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+      - "POSTGRES_DB=mydb"
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
